@@ -5,7 +5,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-const Layout: React.FC = () => {
+const LoginLayout: React.FC = () => {
   const [userInfo, setUserInfo] = useState<any>(null);
 
   useEffect(() => {
@@ -22,12 +22,12 @@ const Layout: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <div>
-        <Navigation
+        {/* <Navigation
           userInfo={userInfo}
           handleSignOutClick={handleSignOutClick}
-        />
+        /> */}
         <Header />
-        <div>
+        <div className="container mt-6 mb-6">
           <Outlet />
         </div>
       </div>
@@ -36,4 +36,4 @@ const Layout: React.FC = () => {
   );
 };
 
-export default Layout;
+export default LoginLayout;

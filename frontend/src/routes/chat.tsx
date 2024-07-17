@@ -5,6 +5,7 @@ import { Conversation } from "../common/types";
 import ChatSidebar from "../components/ChatSidebar";
 import ChatMessages from "../components/ChatMessages";
 import LoadingGrid from "../../public/loading-grid.svg";
+import { withAuthenticator } from "@aws-amplify/ui-react";
 
 const Document: React.FC = () => {
   const params = useParams();

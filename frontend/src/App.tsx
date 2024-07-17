@@ -1,10 +1,11 @@
 import { Amplify, Auth } from "aws-amplify";
-import { withAuthenticator } from "@aws-amplify/ui-react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Layout from "./routes/layout";
+import LoginLayout from "./routes/loginLayout";
 import Documents from "./routes/documents";
 import Chat from "./routes/chat";
+import Home from "./routes/home";
 
 Amplify.configure({
   Auth: {
@@ -30,13 +31,27 @@ Amplify.configure({
   },
 });
 
-let router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
       {
         index: true,
+        Component: Home,
+      }
+    ],
+  },
+  {
+    path: "/doc",
+    element: <LoginLayout />,
+    children: [
+      {
+        index: true,
+        Component: Documents,
+      },
+      {
+        path: "/doc/list",
         Component: Documents,
       },
       {
@@ -51,4 +66,4 @@ function App() {
   return <RouterProvider router={router} />;
 }
 
-export default withAuthenticator(App, { hideSignUp: true });
+export default App;

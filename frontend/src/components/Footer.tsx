@@ -1,29 +1,122 @@
-import { CloudIcon } from "@heroicons/react/24/outline";
-import GitHub from "../../public/github.svg";
-
 const Footer: React.FC = () => {
   return (
-    <div className="bg-gray-100 mt-auto">
-      <footer className="container">
-        <div className=" flex flex-row justify-between py-3 text-sm">
-          <div className="inline-flex items-center">
-            <CloudIcon className="w-5 h-5 mr-1.5" />
-            Powered by Amazon Web Services
-          </div>
-          <div className="inline-flex items-center hover:underline underline-offset-2">
-            <img
-              src={GitHub}
-              alt="React Logo"
-              width={20}
-              className="mr-1.5 py-2 mx-2"
-            />
-            <a href="https://github.com/aws-samples/serverless-pdf-chat">
-              Source code on GitHub
-            </a>
+    <footer id="footer">
+      <div className="footer-newsletter">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-6">
+              <h4>Subscribe to our newsletter</h4>
+              <p></p>
+              <form>
+                <input type="email" name="email" />
+                <input type="submit" value="Subscribe" />
+              </form>
+            </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+      <div className="footer-top">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 col-md-6 footer-contact">
+              <h3>Leapifai</h3>
+              <p>
+              Block 3, Blackrock Business Park, <br />
+              Blackrock, Dublin, Ireland, A94D5D7
+                <br />
+                <br />
+                <strong>Email:</strong> info@leapifai.com
+                <br />
+              </p>
+            </div>
+
+            <div className="col-lg-3 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li>
+                  <i className="bx bx-chevron-right"></i> <a href="#">Home</a>
+                </li>
+                <li>
+                  <i className="bx bx-chevron-right"></i>{" "}
+                  <a href="#">About us</a>
+                </li>
+                <li>
+                  <i className="bx bx-chevron-right"></i>{" "}
+                  <a href="#">Services</a>
+                </li>
+                <li>
+                  <i className="bx bx-chevron-right"></i>{" "}
+                  <a href="#">Terms of service</a>
+                </li>
+                <li>
+                  <i className="bx bx-chevron-right"></i>{" "}
+                  <a href="#">Privacy policy</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-lg-3 col-md-6 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li>
+                  <i className="bx bx-chevron-right"></i>{" "}
+                  <a href="#">Web Design</a>
+                </li>
+                <li>
+                  <i className="bx bx-chevron-right"></i>{" "}
+                  <a href="#">Web Development</a>
+                </li>
+                <li>
+                  <i className="bx bx-chevron-right"></i>{" "}
+                  <a href="#">Product Management</a>
+                </li>
+                <li>
+                  <i className="bx bx-chevron-right"></i>{" "}
+                  <a href="#">Marketing</a>
+                </li>
+                <li>
+                  <i className="bx bx-chevron-right"></i>{" "}
+                  <a href="#">Graphic Design</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-lg-3 col-md-6 footer-links">
+              <h4>Our Social Networks</h4>
+              <p>
+                welcome to join our social net
+              </p>
+              <div className="social-links mt-3">
+                <a href="#" className="twitter">
+                  <i className="bx bxl-twitter"></i>
+                </a>
+                <a href="#" className="facebook">
+                  <i className="bx bxl-facebook"></i>
+                </a>
+                <a href="#" className="instagram">
+                  <i className="bx bxl-instagram"></i>
+                </a>
+                <a href="#" className="google-plus">
+                  <i className="bx bxl-skype"></i>
+                </a>
+                <a href="#" className="linkedin">
+                  <i className="bx bxl-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container py-4">
+        <div className="copyright">
+          &copy; Copyright{" "}
+          <strong>
+            <span>Leapifai</span>
+          </strong>
+          . All Rights Reserved
+        </div>
+      </div>
+    </footer>
   );
 };
 
