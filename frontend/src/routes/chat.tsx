@@ -128,4 +128,4 @@ const Document: React.FC = () => {
   );
 };
 
-export default Document;
+export default withAuthenticator(Document);
